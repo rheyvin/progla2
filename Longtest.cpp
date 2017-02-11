@@ -39,8 +39,6 @@ int Student::get_q1_score(){
 
 int main(){
 Student stud1[100];
-Student num1;
-Student q1;
 int x,y,avg;
 
 for(int i=0; i<3; i++){
@@ -51,23 +49,22 @@ for(int i=0; i<3; i++){
 	cin>>stud1[i].age;
 	cout<<"Student Number:";
 	cin>>x;
-	num1.set_stud_num(x);
+	stud1[i].set_stud_num(x);
 	cout<<"Quiz #1 Score:";
 	cin>>y;
-	q1.set_q1_score(y);
+	stud1[i].set_q1_score(y);
 	cout<<"Course:";
 	cin>>stud1[i].course;
 	cout<<"\n";
 }
 	for(int i=0; i<3; i++){
 		avg=avg+y;
-		q1.set_q1_score(y);
+		stud1[i].set_q1_score(y);
 	}	
 	avg=avg/3;
 	cout<<"The Average of 3 Student in Quiz#1 is:"<<avg<<endl;
 	
 }
-
 //	/*  1. Create an array of class Students. Capacity is 100.
 //		2. Put values to 3 elements of the class Student's array:
 //			2.a. name 
